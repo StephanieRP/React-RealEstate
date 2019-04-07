@@ -1,0 +1,42 @@
+.filter-container {
+  background: $gray;
+  width: 30%;
+  padding: 20px;
+
+  h4 {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  .filters {
+    background: transparent;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1b1b1b;
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 45%;
+    display: inline-block;
+    margin-right: 2.5%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .filter__ {
+    &title {
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 1rem;
+      color: $darkgray;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+header {
+  background: $purple;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+
+  nav {
+    text-transform: uppercase;
+
+    a {
+      color: white;
+      padding: 10px 20px;
+      font-weight: 300;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+
+    .register-btn {
+      background: $pink;
+      border: $pink 1px solid;
+      padding: 10px 25px;
+      text-align: center;
+      color: white;
+      border-radius: 5px;
+      outline: none;
+      font-size: 15px;
+
+      &:hover {
+        color: $purple;
+        background: white;
+        border-color: $purple;
+      }
+    }
+  }
+}
