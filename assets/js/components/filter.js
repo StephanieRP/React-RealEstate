@@ -16,21 +16,18 @@ export default function Filter() {
         <option> Studio</option>
         <option>2 Bedroom</option>
       </select>
-
       <div className="filter__price">
         <span className="filter__title"> Price </span>
         <input type="text" name="min-price" className="filter__min-price" />
         <input type="text" name="max-price" className="filter__max-price" />
       </div>
-
       <div className="filter__floor-space">
         <span className="filter__title"> Floor Space </span>
         <input type="text" name="min-price" className="filter__min-price" />
         <input type="text" name="max-price" className="filter__max-price" />
       </div>
-
-      <div className="filters filter__extra">
-        <span className="filter__title"> Extras </span>
+      <span className="filter__title"> Extras </span>
+      <div className="filter__extra">
         <label htmlFor="extras">
           Elevators
           <input type="checkbox" name="extras" value="elevator" />

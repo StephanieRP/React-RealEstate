@@ -12,15 +12,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(46);
+var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _filter = __webpack_require__(236);
+var _filter = __webpack_require__(238);
 
 var _filter2 = _interopRequireDefault(_filter);
 
-var _listings = __webpack_require__(237);
+var _listings = __webpack_require__(239);
 
 var _listings2 = _interopRequireDefault(_listings);
 
@@ -75,7 +75,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Header;
 
-var _react = __webpack_require__(46);
+var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -119,7 +119,7 @@ function Header() {
 
 /***/ }),
 
-/***/ 235:
+/***/ 237:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127,7 +127,7 @@ function Header() {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(46);
+var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -186,7 +186,7 @@ _reactDom2.default.render(_react2.default.createElement(Layout, null), app);
 
 /***/ }),
 
-/***/ 236:
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -197,7 +197,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Filter;
 
-var _react = __webpack_require__(46);
+var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -277,13 +277,13 @@ function Filter() {
       _react2.default.createElement("input", { type: "text", name: "max-price", className: "filter__max-price" })
     ),
     _react2.default.createElement(
+      "span",
+      { className: "filter__title" },
+      " Extras "
+    ),
+    _react2.default.createElement(
       "div",
-      { className: "filters filter__extra" },
-      _react2.default.createElement(
-        "span",
-        { className: "filter__title" },
-        " Extras "
-      ),
+      { className: "filter__extra" },
       _react2.default.createElement(
         "label",
         { htmlFor: "extras" },
@@ -315,7 +315,7 @@ function Filter() {
 
 /***/ }),
 
-/***/ 237:
+/***/ 239:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -326,20 +326,163 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Listings;
 
-var _react = __webpack_require__(46);
+var _react = __webpack_require__(42);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactFontawesome = __webpack_require__(236);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Listings() {
   return _react2.default.createElement(
-    "div",
-    null,
-    "Listings"
+    "section",
+    { className: "listings-container" },
+    _react2.default.createElement(
+      "h2",
+      null,
+      " Short stay"
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "listings__search" },
+      _react2.default.createElement("input", { type: "text", name: "search" }),
+      _react2.default.createElement(
+        "div",
+        { className: "listings__search-sort" },
+        _react2.default.createElement(
+          "p",
+          null,
+          " 390 results found"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "listings__search-options" },
+          _react2.default.createElement(
+            "select",
+            { name: "sort", className: "sort" },
+            _react2.default.createElement(
+              "option",
+              { value: "price-high" },
+              " Highest Price"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "price-low" },
+              " Lowest Price"
+            )
+          )
+        ),
+        _react2.default.createElement("div", { className: "listings__view" }),
+        "1 2"
+      ),
+      _react2.default.createElement("div", { className: "listings__result" }),
+      _react2.default.createElement(
+        "div",
+        { className: "listings__img" },
+        "Img",
+        _react2.default.createElement(
+          "span",
+          { className: "listings__img-address" },
+          " Address"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "listings__details" },
+          _react2.default.createElement(
+            "div",
+            { className: "listings__details-img" },
+            "img"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "listings__details-user" },
+            "user details",
+            _react2.default.createElement(
+              "span",
+              null,
+              " Name"
+            ),
+            _react2.default.createElement(
+              "span",
+              null,
+              " Date"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "listings__details-info" },
+              _react2.default.createElement(
+                "div",
+                { className: "square-space" },
+                "square"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "bedrooms" },
+                "bedrooms"
+              )
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "listings__details-bottom-info" },
+        _react2.default.createElement(
+          "span",
+          null,
+          " $1000 / month "
+        ),
+        _react2.default.createElement(
+          "span",
+          null,
+          " Hyde Park, Chicago "
+        )
+      ),
+      _react2.default.createElement("div", { className: "listings__pagination" }),
+      _react2.default.createElement(
+        "ul",
+        { className: "listings__pagination-nums" },
+        _react2.default.createElement(
+          "li",
+          null,
+          " Prev"
+        ),
+        _react2.default.createElement(
+          "li",
+          null,
+          " 1"
+        ),
+        _react2.default.createElement(
+          "li",
+          null,
+          " 2"
+        ),
+        _react2.default.createElement(
+          "li",
+          null,
+          " 3"
+        ),
+        _react2.default.createElement(
+          "li",
+          null,
+          " 4"
+        ),
+        _react2.default.createElement(
+          "li",
+          null,
+          " 5"
+        ),
+        _react2.default.createElement(
+          "li",
+          null,
+          " Next"
+        )
+      )
+    )
   );
 }
 
 /***/ })
 
-},[235]);
+},[237]);

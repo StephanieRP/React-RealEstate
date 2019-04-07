@@ -1,6 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-
 const VENDOR_LIBS = ["babel-polyfill", "redux", "react-redux", "react-dom"];
 
 module.exports = {
